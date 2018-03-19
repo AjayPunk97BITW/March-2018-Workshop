@@ -66,7 +66,7 @@ app.get('/getPost/:id',(req,res)=>{
     mongo.connect(host,(err,client)=>{
         if(err) throw err;
         else{
-            var db=client.db('14cs140');
+            var db=client.db('14cs103');
           db.collection('posts').findOne({"_id":req.params.id},(err,post)=>{
                 if (err) throw err;
                 else{
